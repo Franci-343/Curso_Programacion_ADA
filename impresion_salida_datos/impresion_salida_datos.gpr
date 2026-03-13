@@ -1,0 +1,22 @@
+with "config/impresion_salida_datos_config.gpr";
+project Impresion_Salida_Datos is
+
+   for Source_Dirs use ("src/", "config/");
+   for Object_Dir use "obj/" & Impresion_Salida_Datos_Config.Build_Profile;
+   for Create_Missing_Dirs use "True";
+   for Exec_Dir use "bin";
+   for Main use ("impresion_salida_datos.adb");
+
+   package Compiler is
+      for Default_Switches ("Ada") use Impresion_Salida_Datos_Config.Ada_Compiler_Switches;
+   end Compiler;
+
+   package Binder is
+      for Switches ("Ada") use ("-Es"); --  Symbolic traceback
+   end Binder;
+
+   package Install is
+      for Artifacts (".") use ("share");
+   end Install;
+
+end Impresion_Salida_Datos;
