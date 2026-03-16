@@ -1,0 +1,10 @@
+name = "sistema_gestion_acceso"
+description = ""
+version = "0.1.0-dev"
+
+authors = ["Franco Ayala"]
+maintainers = ["Franco Ayala <fa8050386@gmail.com>"]
+maintainers-logins = ["Franci-343"]
+licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
+website = ""
+tags = []
